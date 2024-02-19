@@ -23,7 +23,7 @@ const Page = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      setLoader(true)
+      setLoader(true);
       const res = await fetch("/api/contact/submit", {
         method: "POST",
         headers: {
@@ -34,18 +34,18 @@ const Page = () => {
       const data = await res.json();
       if (data.success === true) {
         setShowAlert(true); // Set showAlert to true after successful form submission
-setLoader(false)
+        setLoader(false);
         // Hide the alert after some time (e.g., 3 seconds)
         setTimeout(() => {
           setShowAlert(false);
         }, 3000);
       } else {
-        setLoader(false)
+        setLoader(false);
         console.log(data.message); // Log the error message if submission failed
       }
     } catch (error) {
       console.error("Failed to submit contact form", error.message);
-      setLoader(false)
+      setLoader(false);
       // Handle error states or display an error message
     }
     setFormData({
@@ -105,17 +105,20 @@ setLoader(false)
           </div>
 
           <div className="mt-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            <h3 className="text-xl font-semibold text-gray-900 ">
               Phone Numbers
             </h3>
             <div className="flex items-center">
               <p className="text-gray-700">President: 9448624775 </p>
             </div>
-            <div className="flex items-center mt-2">
-              <p className="text-gray-700">Mobile: 9482624747</p>
-            </div>
-            <div className="flex items-center mt-2">
-              <p className="text-gray-700">WhatsApp: 9482624747</p>
+            <div className="flex-col">
+              <div className="font-semibold text-lg">Priest:</div>
+              <div className="flex items-center ">
+                <p className="text-gray-700">Mobile: 9482624747</p>
+              </div>
+              <div className="flex items-center">
+                <p className="text-gray-700">WhatsApp: 9482624747</p>
+              </div>
             </div>
           </div>
 
@@ -132,7 +135,14 @@ setLoader(false)
                 <path d="M10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
                 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
               </svg>
-              <p className="text-gray-700 break-all"><a href="mailto:shreebasaveshwaratemplekulkund@gmail.com" class="text-black hover:text-green-500 transition-colors duration-300">shreebasaveshwaratemplekulkund@gmail.com</a></p>
+              <p className="text-gray-700 break-all">
+                <a
+                  href="mailto:shreebasaveshwaratemplekulkund@gmail.com"
+                  class="text-black hover:text-green-500 transition-colors duration-300"
+                >
+                  shreebasaveshwaratemplekulkund@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -250,35 +260,70 @@ setLoader(false)
         {showAlert && (
           <div className="mt-4 p-2 text-white bg-green-500 rounded-md">
             <p className="text-center">Form submitted successfully!</p>
-            <p className="text-center">We'll soon address all your inquiries.</p>
+            <p className="text-center">
+              We'll soon address all your inquiries.
+            </p>
           </div>
         )}
-<div className="w-full max-w-md p-4 sm:p-8 bg-orange-100 rounded-lg shadow-lg mt-8 mx-auto">
-  <h2 className="text-2xl sm:text-3xl text-center font-bold tracking-tight mb-4 sm:mb-6">Social Links</h2>
-  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-4">
-    {/* Instagram */}
-    <div className="social-icon">
-      <a href="https://www.instagram.com/shreebasaveshwaratemple?igsh=Ymk0ZXhwZHV0a3lk" target="_blank" rel="noopener noreferrer" className="icon-link relative overflow-hidden group">
-        <Image src={Insta} alt="Instagram" width={80} height={80} className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110" />
-      </a>
-    </div>
-    
-    {/* Facebook */}
-    <div className="social-icon">
-      <a href="https://www.facebook.com/profile.php?id=100090518155741" target="_blank" rel="noopener noreferrer" className="icon-link relative overflow-hidden group">
-        <Image src={Face} alt="Facebook" width={80} height={80} className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110" />
-      </a>
-    </div>
-    
-    {/* YouTube */}
-    <div className="social-icon">
-      <a href="https://www.instagram.com/shreebasaveshwaratemple?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer" className="icon-link relative overflow-hidden group">
-        <Image src={Yt} alt="YouTube" width={80} height={80} className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110" />
-      </a>
-    </div>
-  </div>
+        <div className="w-full max-w-md p-4 sm:p-8 bg-orange-100 rounded-lg shadow-lg mt-8 mx-auto">
+          <h2 className="text-2xl sm:text-3xl text-center font-bold tracking-tight mb-4 sm:mb-6">
+            Social Links
+          </h2>
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-4">
+            {/* Instagram */}
+            <div className="social-icon">
+              <a
+                href="https://www.instagram.com/shreebasaveshwaratemple?igsh=Ymk0ZXhwZHV0a3lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-link relative overflow-hidden group"
+              >
+                <Image
+                  src={Insta}
+                  alt="Instagram"
+                  width={80}
+                  height={80}
+                  className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110"
+                />
+              </a>
+            </div>
 
+            {/* Facebook */}
+            <div className="social-icon">
+              <a
+                href="https://www.facebook.com/profile.php?id=100090518155741"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-link relative overflow-hidden group"
+              >
+                <Image
+                  src={Face}
+                  alt="Facebook"
+                  width={80}
+                  height={80}
+                  className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110"
+                />
+              </a>
+            </div>
 
+            {/* YouTube */}
+            <div className="social-icon">
+              <a
+                href="https://www.instagram.com/shreebasaveshwaratemple?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-link relative overflow-hidden group"
+              >
+                <Image
+                  src={Yt}
+                  alt="YouTube"
+                  width={80}
+                  height={80}
+                  className="rounded-full transition-transform duration-300 transform scale-100 group-hover:scale-110"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
