@@ -18,6 +18,7 @@ const Footer = () => {
         <div className="w-full md:w-2/3 lg:w-1/3 text-center"> {/* Adjusted width for different screen sizes */}
           <h3 className="text-xl font-bold mb-2">Phone Numbers</h3>
           <p>President: 9448624775</p>
+          <p className='text-xl font-bold'>Priest:</p>
           <p>Mobile: 9482624747</p>
           <p>WhatsApp: 6362148620</p>
         </div>
