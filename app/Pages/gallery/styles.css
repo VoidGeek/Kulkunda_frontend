@@ -1,0 +1,61 @@
+#app {
+    height: 100%;
+    background-color: red;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 80%;
+    height: 100%;
+    background-color: #000;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  iframe{
+    width: 100%;
+    height:100%;
+  }
+
+/* Existing styles... */
+
+/* Opening animation for gallery images */
+/* Opening animation for gallery images */
+/* Opening animation for gallery images */
+.grid-opening-animation {
+  opacity: 0; /* Initial opacity set to fully transparent */
+  transform: scale(0.5); /* Initial scale for a smoother effect */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Adjusted duration to 1s */
+}
+
+.grid-opening-animation.show {
+  opacity: 1; /* Final opacity set to fully visible */
+  transform: scale(1);
+}
