@@ -30,7 +30,7 @@ const page = () => {
           <span className="text-lg md:text-2xl lg:text-4xl font-mono font-semibold text-center">
             Historical Significance
           </span>
-          <p className="text-sm md:text-base lg:text-lg text-center">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
             A place called 'Basavanamoola' of Kulkunda which has a legendary and
             historical background on the bank of Kumaradhara River at the
             foothills of Kumara Parvata, near the famous Kukke Sri Subramanya
@@ -40,7 +40,7 @@ const page = () => {
             a beautiful Basaveshwara temple in the middle of the forest with a
             'Shivalinga' on Basava's forehead.
           </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
             As mentioned in 'Skanda Purana',when Lord Sri Subrahmanya Swami
             killed the demons like Tarakasura with archery, Lord Sri Subrahmanya
             Swami did penance on Lord Shiva when he saw the demons come back to
@@ -48,12 +48,12 @@ const page = () => {
             appeared in the form of Nandi and taught Lord Sri Subrahmanya Swami
             the art of weaponry first.
           </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
             Once upon a time,it attracted devotees from all over the state and
             who brought lakhs of cattle near Kukke Kshetra and Lord
             Basaveshwara, for trade exchange.
           </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
             The 'Cattle Fair' with its glorious historical background which was
             held for 15 days starting from the full moon of Kartika masa (Around
             November).Over time due to various reasons the cattle fair became
@@ -65,7 +65,7 @@ const page = () => {
             Subrahmanya Swamy's Champa Shasthi begins after the Go Puja
             (worshiping of cow).
           </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
             About 800 years ago,it is known in history that the Keladi kings
             Shivappa Nayaka and Surappa Nayaka were ruling the 'Kadambasamsthan'
             (Kadaba).It is also known in Ashtamangala that the royal family
@@ -78,16 +78,12 @@ const page = () => {
             year, made the statue to sit at the foot of a tree and started to
             worship.
           </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
+          <p className="text-sm md:text-base lg:text-lg text-justify">
             In the course of time,a good theologian completely guided in
             renovating and re-instating the temple through Ashtamangala.
-          </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
             It is believed that,if you get darshan of Lord Kukke Subrahmanya
             and then get darshan of Lord Shri Basaveshwara (Nandishwara) and
             offer prayers,you will get full results.
-          </p>
-          <p className="text-sm md:text-base lg:text-lg text-center">
             It is believed by thousands of devotees that Lord Basaveshwara
             resides at Basavanmoola and grants the wishes of the devotees.
           </p>

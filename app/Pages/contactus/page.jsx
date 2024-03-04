@@ -160,7 +160,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 p-8  min-h-screen ">
+      <div className="w-full md:w-1/2 p-8  min-h-screen mt-7">
         {/*enquire form*/}
         <form
           action="#"
@@ -265,7 +265,7 @@ const Page = () => {
             </p>
           </div>
         )}
-        <div className="w-full max-w-md p-4 sm:p-8 bg-orange-100 rounded-lg shadow-lg mt-8 mx-auto">
+        <div className="w-full max-w-md sm:p-8 bg-orange-100 rounded-lg shadow-lg mt-8">
           <h2 className="text-2xl sm:text-3xl text-center font-bold tracking-tight mb-4 sm:mb-6">
             Social Links
           </h2>
