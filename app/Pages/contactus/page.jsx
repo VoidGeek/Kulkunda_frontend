@@ -5,8 +5,11 @@ import Image from "next/image";
 import Insta from "/app/assets/image/insta.png";
 import Face from "/app/assets/image/facebook.webp";
 import Yt from "/app/assets/image/yt.png";
+import { useSelector } from "react-redux";
 
 const Page = () => {
+  const { langName } = useSelector((state) => state.lang);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -88,11 +91,26 @@ const Page = () => {
       {loader && <Loader />}
       <div className="w-full md:w-3/4 p-8 mb-8 md:mb-0 rounded-lg shadow-lg mt-5">
         <div className="bg-orange-100 mt-10 p-8 rounded-lg">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2
+            className={`text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ${
+              langName === "Kannada" ? "hidden" : "flex"
+            }`}
+          >
             Contact Information
           </h2>
+          <h2
+            className={`text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ${
+              langName === "English" ? "hidden" : "flex"
+            }`}
+          >
+            ಸಂಪರ್ಕಿಸಲು ಮಾಹಿತಿ
+          </h2>
 
-          <div className="mt-6">
+          <div
+            className={`mt-6 flex-col${
+              langName === "Kannada" ? "hidden" : "flex"
+            }`}
+          >
             <h3 className="text-xl font-semibold text-gray-900 mb-3">
               Address
             </h3>
@@ -103,8 +121,28 @@ const Page = () => {
               Karnataka-574238
             </p>
           </div>
+          <div
+            className={`mt-6 flex-col${
+              langName === "English" ? "hidden" : "flex"
+            }`}
+          >
+            <h3 className="text-xl font-bold mb-2">ವಿಳಾಸ:</h3>
+            <address>
+              ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವಸ್ಥಾನ,
+              <br />
+              ಬಸವನ ಮೂಲ, ಕುಲ್ಕುಂದ,
+              <br />
+              ಕಡಬ ತಾಲೂಕು, ದಕ್ಷಿಣ ಕನ್ನಡ,
+              <br />
+              ಕರ್ನಾಟಕ-574238
+            </address>
+          </div>
 
-          <div className="mt-8">
+          <div
+            className={`mt-8 flex-col ${
+              langName === "Kannada" ? "hidden" : "flex"
+            }`}
+          >
             <h3 className="text-xl font-semibold text-gray-900 ">
               Phone Numbers
             </h3>
@@ -122,8 +160,55 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div
+            className={`mt-8 flex-col ${
+              langName === "English" ? "hidden" : "flex"
+            }`}
+          >
+            <h3 className="text-xl font-semibold text-gray-900 ">
+              ದೂರವಾಣಿ ಸಂಖ್ಯೆ:
+            </h3>
+            <div className="flex items-center">
+              <p className="text-gray-700">ಅಧ್ಯಕ್ಷರು: 9448624775 </p>
+            </div>
+            <div className="flex-col">
+              <div className="font-semibold text-lg">ಅರ್ಚಕರು:</div>
+              <div className="flex items-center ">
+                <p className="text-gray-700">ಮೊಬೈಲ್: 9482624747</p>
+              </div>
+              <div className="flex items-center">
+                <p className="text-gray-700">ವಾಟ್ಸಾಪ್‌: 6362148620</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={`mt-8 ${langName === "Kannada" ? "hidden" : "flex"}`}>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Email</h3>
+            <div className="flex items-center">
+              <svg
+                className="w-6 h-6 mr-3 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 16"
+              >
+                <path d="M10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+              </svg>
+              <p className="text-gray-700 break-all">
+                <a
+                  href="mailto:shreebasaveshwaratemplekulkund@gmail.com"
+                  class="text-black hover:text-green-500 transition-colors duration-300"
+                >
+                  shreebasaveshwaratemplekulkund@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className={`mt-8 ${langName === "English" ? "hidden" : "flex"}`}>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              ಮಿಂಚಂಚೆ(ಈ-ಮೇಲ್)
+            </h3>
             <div className="flex items-center">
               <svg
                 className="w-6 h-6 mr-3 text-gray-800 dark:text-white"

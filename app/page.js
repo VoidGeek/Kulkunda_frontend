@@ -247,10 +247,15 @@ const Page = () => {
             />
             <div className='absolute top-0 left-0 right-0 bottom-16 flex flex-col justify-end p-3'>
               <h3 className='text-xl sm:text-2xl font-semibold mb-2 text-yellow-300'>{currentContent.title2}</h3>
-              <p className='text-xl sm:text-2xl font-semibold mb-2 text-yellow-300'>⦾ {found && newsUpdatesList.length > 0 && newsUpdatesList[0].headline}</p>
+              <p className='text-lg sm:text-xl font-semibold mb-2 text-yellow-300'>⦾ {found && newsUpdatesList.length > 0 && newsUpdatesList[0].headline}</p>
               <p className='text-sm sm:text-base font-semibold mb-2 text-yellow-300 line-clamp-3'>
                 {found && newsUpdatesList.length > 0 && newsUpdatesList[0].description}
               </p>
+              <Link href="/Pages/News">
+              <p className='text-sm sm:text-base font-semibold mb-2 text-yellow-300 line-clamp-3'>
+                Read more...
+              </p>
+              </Link>
             </div>
           </div>
         </div>
