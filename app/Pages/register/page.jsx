@@ -177,31 +177,31 @@ const Register = () => {
                 </span>
               )}
 
-              <button
+              {/* <button
                 className={`p-3 bg-green-500 text-white text-xl hover:bg-green-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
                 onClick={handlesendotp}
                 type="button"
               >
                 Send OTP
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-              <input
+              {/* <input
                 type="text"
                 placeholder="Enter the OTP"
                 className="border p-3 rounded-lg hover:shadow-lg focus:outline-none "
                 id="otp"
                 onChange={handleotpChange}
-              />
-              <button
+              /> */}
+              {/* <button
                 className={`p-3 bg-blue-500 text-white text-xl hover:bg-blue-600 rounded-lg font-semibold ${tick?"hidden":"flex"}`}
                 onClick={handleverifyotp}
                 type="button"
               >
                 Verify OTP
-              </button>
+              </button> */}
             </div>
           </div>
           <input
