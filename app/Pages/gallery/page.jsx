@@ -206,6 +206,30 @@ const GalleryPage = () => {
           ></iframe>
         </div>
       </div>
+
+      <div className="container mx-auto py-10 px-4 md:px-0 md:pt-10 flex flex-col-reverse md:flex-row items-center justify-center">
+        {/* Heading and Explanation Section */}
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/2 mb-6 md:mb-0 sm:w-full order-2 md:order-1">
+          <div className="font-semibold text-4xl md:text-5xl text-black pb-4 md:pb-6">
+            Thayambaka|Mesmerizing Kerala Chenda performance by Shri Gangadhara Marar&Team|Kulkunda Jathre 2024
+          </div>
+          <p className="text-gray-600">
+            ಕುಲ್ಕುಂದ ಶ್ರೀ ಬಸವೇಶ್ವರ ದೇವರಿಗೆ ತಾಯಂಬಕ ಸೇವೆ ಸಂಪೂರ್ಣ ವೀಡಿಯೊ ವೀಕ್ಷಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ
+          </p>
+        </div>
+
+        {/* Video Section */}
+        <div className="w-full md:w-1/2 lg:w-2/3 xl:w-1/2 sm:h-[200px] md:h-[300px] rounded-xl overflow-hidden mb-10 sm:order-1 md:order-2">
+          <iframe
+            className="w-full sm:w-4/5 h-full" // Adjusted the width for small screens
+            src="https://www.youtube.com/embed/CrcDfcjMifs?si=Ahj-t9RZL-B638m0"
+            title="Example Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };
