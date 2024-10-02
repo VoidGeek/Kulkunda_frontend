@@ -8,7 +8,7 @@ module.exports = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://seva.basavanamoolatemple.in/api/:path*', // Replace with your backend server's address
+        destination: 'https://kulkunda-backend.onrender.com/api/:path*', // Replace with your backend server's address
       },
     ];
   },
@@ -18,7 +18,7 @@ module.exports = {
       app.use(
         '/api',
         createProxyMiddleware({
-          target: 'http://seva.basavanamoolatemple.in', // Replace with your backend server's address
+          target: 'https://kulkunda-backend.onrender.com', // Replace with your backend server's address
           changeOrigin: true,
           pathRewrite: { '^/api': '' },
         })
